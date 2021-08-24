@@ -1,6 +1,7 @@
-const path = require('path');
 const webpack = require("webpack");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+const path = require('path');
+
 module.exports = {
         entry: {
           app: './assets/js/script.js',
@@ -17,7 +18,7 @@ module.exports = {
         module:{
           rules: [
             {
-              test: /\.jpg/i,
+              test: /\.(png|jpe?g|gif)$/i,
               use: [
                 {
                   loader: "file-loader",
